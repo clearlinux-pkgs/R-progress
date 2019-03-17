@@ -1,20 +1,5 @@
 # This file contains recursive sources that require this package
-R-DendSer
 R-GGally
-R-ICS
-R-ICSNP
-R-VIM
-R-caret
-R-clue
-R-compositions
-R-cvTools
-R-ddalpha
-R-dendextend
-R-fpc
-R-mvoutlier
-R-pcaPP
-R-recipes
-R-robCompositions
-R-robustbase
-R-rrcov
-R-seriation
+R-pdp
+R-readxl
+R-rncl
