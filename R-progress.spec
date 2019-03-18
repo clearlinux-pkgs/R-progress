@@ -4,15 +4,12 @@
 #
 Name     : R-progress
 Version  : 1.2.0
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/progress_1.2.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/progress_1.2.0.tar.gz
 Summary  : Terminal Progress Bars
 Group    : Development/Tools
 License  : MIT
-Requires: R-assertthat
-Requires: R-hms
-Requires: R-prettyunits
 BuildRequires : R-assertthat
 BuildRequires : R-hms
 BuildRequires : R-prettyunits
@@ -33,10 +30,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552842828
+export SOURCE_DATE_EPOCH=1552873731
 
 %install
-export SOURCE_DATE_EPOCH=1552842828
+export SOURCE_DATE_EPOCH=1552873731
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
