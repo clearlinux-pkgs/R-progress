@@ -4,23 +4,28 @@
 #
 Name     : R-progress
 Version  : 1.2.0
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/progress_1.2.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/progress_1.2.0.tar.gz
 Summary  : Terminal Progress Bars
 Group    : Development/Tools
 License  : MIT
+Requires: R-pkgconfig
 BuildRequires : R-assertthat
 BuildRequires : R-hms
+BuildRequires : R-pkgconfig
 BuildRequires : R-prettyunits
 BuildRequires : buildreq-R
 
 %description
-## Example package for the C++ API of `progress`
-Progress bars for your C++ code in R packages.
-The `progress` package has a pure C++ API for
-managing progress bars. This is an example package
-that shows how to use it.
+<h1 align="center">
+<br>
+<br>
+<img width="400" src="./inst/logo.png" alt="progress">
+<br>
+<br>
+<br>
+</h1>
 
 %prep
 %setup -q -c -n progress
@@ -30,10 +35,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552873731
+export SOURCE_DATE_EPOCH=1556490633
 
 %install
-export SOURCE_DATE_EPOCH=1552873731
+export SOURCE_DATE_EPOCH=1556490633
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -69,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  progress || :
+R CMD check --no-manual --no-examples --no-codoc progress || :
 
 
 %files
