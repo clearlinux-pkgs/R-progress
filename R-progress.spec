@@ -4,7 +4,7 @@
 #
 Name     : R-progress
 Version  : 1.2.2
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/progress_1.2.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/progress_1.2.2.tar.gz
 Summary  : Terminal Progress Bars
@@ -19,35 +19,31 @@ BuildRequires : R-crayon
 BuildRequires : R-hms
 BuildRequires : R-prettyunits
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-<h1 align="center">
-<br>
-<br>
-<img width="400" src="man/figures/logo.png" alt="progress">
-<br>
-<br>
-<br>
-</h1>
+elapsed time, and/or the estimated completion time. They work in
+    terminals, in 'Emacs' 'ESS', 'RStudio', 'Windows' 'Rgui' and the
+    'macOS' 'R.app'. The package also provides a 'C++' 'API', that works
+    with or without 'Rcpp'.
 
 %prep
 %setup -q -c -n progress
+cd %{_builddir}/progress
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571878734
+export SOURCE_DATE_EPOCH=1589759015
 
 %install
-export SOURCE_DATE_EPOCH=1571878734
+export SOURCE_DATE_EPOCH=1589759015
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
