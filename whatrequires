@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 R-GGally
-R-pdp
-R-phylobase
+R-WikidataR
+R-batchtools
 R-readxl
 R-rncl
+R-vroom
