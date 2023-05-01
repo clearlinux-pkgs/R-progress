@@ -4,7 +4,7 @@
 #
 Name     : R-progress
 Version  : 1.2.2
-Release  : 49
+Release  : 50
 URL      : https://cran.r-project.org/src/contrib/progress_1.2.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/progress_1.2.2.tar.gz
 Summary  : Terminal Progress Bars
